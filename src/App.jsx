@@ -1,35 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { NavBar } from "./components/navbar";
+import { ItemListContainer } from "./components/itemlistcontainer";
+import { Footer } from "./components/footer";
 
-function App() {
-  const [count, setCount] = useState(0)
+const titulo = "Galeria de Productos";
+const texto = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo vitae aliquid veniam? Fugit excepturi voluptatum at possimus consequatur suscipit, quam dolore dignissimos, facilis asperiores nisi adipisci explicabo porro ab pariatur!";
 
+export function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="container">
+      <NavBar />
+      <ItemListContainer titulo={titulo} texto={texto} />
+      <Footer />
+    </div>
+  );
 }
-
-export default App
